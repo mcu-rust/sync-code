@@ -13,7 +13,7 @@ impl Builder {
     }
 
     pub fn add<P: AsRef<Path>>(mut self, file: P, dep_file: P) -> Self {
-        // println!("cargo:rerun-if-changed={}", dep_file.as_ref().display());
+        println!("cargo:rerun-if-changed={}", dep_file.as_ref().display());
         self.table.push(Sync::new(
             file.as_ref().to_path_buf(),
             dep_file.as_ref().to_path_buf(),
