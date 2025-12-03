@@ -1,5 +1,5 @@
-// sync start
+// $sync start
 
 Old code
 
-// sync end
+// $sync end

@@ -1,9 +1,9 @@
-// sync start
+// $sync start
 
 Don't change
 
-// sync block2
+// $sync block2
 
 old code
 
-// sync end
+// $sync end

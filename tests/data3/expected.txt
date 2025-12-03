@@ -1,17 +1,17 @@
-// sync block1_modify
+// $sync block1_modify
 
 am1
 bm1
 cm1
 
-// sync block2_modify
+// $sync block2_modify
 am2
 bm2
 cm2
-// sync block3
+// $sync block3
 
 a3
 b3
 c3
 
-// sync end
+// $sync end

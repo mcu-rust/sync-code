@@ -17,7 +17,7 @@ impl Sync {
         let src = fs::read_to_string(&self.src).unwrap();
         let mut output = fs::read_to_string(&self.dest).unwrap();
 
-        let re = Regex::new(r"// sync .+\n").unwrap();
+        let re = Regex::new(r"// \$sync .+\n").unwrap();
         for mark in re.find_iter(&src).map(|c| c.as_str()) {
             let (_, code1, _) = get_marked_code(&src, mark);
             let (before, code2, after) = get_marked_code(&output, mark);
@@ -39,7 +39,7 @@ fn get_marked_code<'a>(code: &'a str, mark: &str) -> (&'a str, &'a str, &'a str)
     if let Some(i) = i {
         let before = &code[..i];
         let rest = &code[i..];
-        if let Some(i) = rest[1..].find("// sync") {
+        if let Some(i) = rest[1..].find("// $sync") {
             let after = &rest[i..];
             let code = &rest[..i];
             return (before, code, after);

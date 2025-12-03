@@ -1,7 +1,7 @@
-// sync start
+// $sync start
 
 aaa
 bbb
 ccc
 
-// sync end
+// $sync end

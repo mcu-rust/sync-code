@@ -1,10 +1,10 @@
-// sync block1_modify
+// $sync block1_modify
 
 am1
 bm1
 cm1
 
-// sync block2_modify
-// sync block3
+// $sync block2_modify
+// $sync block3
 
-// sync end
+// $sync end

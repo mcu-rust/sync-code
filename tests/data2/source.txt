@@ -1,11 +1,11 @@
-// sync block1
+// $sync block1
 
 a
 b
 c
-// sync block2
+// $sync block2
 a2
 b2
 c2
 
-// sync end
+// $sync end
