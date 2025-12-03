@@ -1,0 +1,14 @@
+[package]
+    authors = ["Jalon Wong <jalonwong@gmail.com>"]
+    categories = ["build"]
+    description = "Synchronize code blocks between different files"
+    documentation = "https://docs.rs/sync-code"
+    edition = "2024"
+    license = "MIT OR Apache-2.0"
+    name = "sync-code"
+    readme = "README.md"
+    repository = "https://github.com/mcu-rust/sync-code"
+    version = "0.1.0"
+
+[dependencies]
+    regex = "1.12.2"
