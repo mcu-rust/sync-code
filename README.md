@@ -6,10 +6,11 @@ It can replace `macros` in certain scenarios. For example, when your code isn’
 
 # Usage
 `Cargo.toml`:
-```toml
-[build-dependencies]
-sync-code = "0.1.0"
+```shell
+cargo add --build sync-code
 ```
+
+See [crate](https://crates.io/crates/sync-code).
 
 `build.rs`:
 ```rust
