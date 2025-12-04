@@ -8,10 +8,9 @@
 //! properly without using `macros`.
 //!
 //! # Usage
-//! `Cargo.toml`:
-//! ```toml
-//! [build-dependencies]
-//! sync-code = "0.1.0"
+//! Run command:
+//! ```shell
+//! cargo add --build sync-code
 //! ```
 //!
 //! `build.rs`:
