@@ -43,6 +43,7 @@ use sync::Sync;
 #[derive(Default)]
 pub struct Builder {
     table: Vec<Sync>,
+    file_list: Vec<String>,
 }
 
 impl Builder {
@@ -51,7 +52,9 @@ impl Builder {
     }
 
     pub fn add<P: AsRef<Path>>(mut self, file: P, dep_file: P) -> Self {
-        println!("cargo:rerun-if-changed={}", dep_file.as_ref().display());
+        self.file_list.push(file.as_ref().display().to_string());
+        self.file_list.push(dep_file.as_ref().display().to_string());
+
         self.table.push(Sync::new(
             file.as_ref().to_path_buf(),
             dep_file.as_ref().to_path_buf(),
@@ -60,9 +63,13 @@ impl Builder {
     }
 
     pub fn sync(&mut self) {
-        println!("Start syncing code ... {}", self.table.len());
         for sync in &self.table {
             sync.sync();
+        }
+
+        self.file_list.dedup();
+        for file in &self.file_list {
+            println!("cargo:rerun-if-changed={}", file);
         }
     }
 }
