@@ -10,9 +10,5 @@
     repository = "https://github.com/mcu-rust/sync-code"
     version = "0.1.4"
 
-[lib]
-    doc = true
-    doctest = false
-
 [dependencies]
     regex = "1.12.2"

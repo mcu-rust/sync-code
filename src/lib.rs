@@ -14,7 +14,7 @@
 //! ```
 //!
 //! `build.rs`:
-//! ```rust
+//! ```ignore
 //! fn main() {
 //!     sync_code::Builder::new()
 //!         .add("src/target1.rs", "src/source1.rs")
